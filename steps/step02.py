@@ -15,14 +15,14 @@ class Variable:
         self.data = data
 
 class Function:
-    def __call__(self, input): #__call__ 메서드는 파이썬의 특수 메서드로 이후 f = Function() 선언 후 f(..) 형태로 메서드를 호출 가능
+    def __call__(self, input): # __call__ 메서드는 파이썬의 특수 메서드로 이후 f = Function() 선언 후 f(..) 형태로 메서드를 호출 가능
         x = input.data # 데이터를 꺼낸다
         y = self.forward(x) # 구체적인 계산은 forward에서 한다
         output = Variable(y) # Variable 형태로 되돌린다
         return output
     
     def forward(self, x):
-        raise NotImplementedError() #구체적인 로직은 하위 클래스에서 구현 #상속하여 구현해야 함 명시적 표시
+        raise NotImplementedError() # 구체적인 로직은 하위 클래스에서 구현 #상속하여 구현해야 함 명시적 표시
     
 class Square(Function):
     def forward(self,x):
