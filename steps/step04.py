@@ -56,7 +56,7 @@ dy = numerical_diff(f,x)
 print(dy) #x^2의 미분, 대략 2x에 가까움 / 4.000000000004
 
 # 합성함수 미분 구현
-#  y =(e^x^2)^2이라는 계산에 대한 미분 dy/dx 계산
+# y =(e^x^2)^2이라는 계산에 대한 미분 dy/dx 계산
 def f(x):
     A = Square()
     B = Exp()
