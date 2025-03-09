@@ -6,7 +6,7 @@ class Variable:
     def __init__(self, data):
         self.data = data
 
-data = np.array(1.0) #다차원 배열 생성
+data = np.array(1.0) # 다차원 배열 생성
 x = Variable(data)
 print(x.data) # 1.0
 
